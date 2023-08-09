@@ -61,7 +61,31 @@ let startAutomate = async () => {
     } catch (e) {
       console.log("Error on clicking Develop App Button");
     }
-    await delay(3000);
+    await delay(4000);
+    //Allow Custom App Developement
+    try {
+      let href = document.querySelectorAll("a[href]");
+      let hrefArr = [...href];
+      for (let a in hrefArr) {
+        if (hrefArr[a].textContent === "Allow custom app development") {
+          hrefArr[a].click();
+        }
+      }
+    } catch (e) {
+      await delay(4000);
+      try {
+        let href = document.querySelectorAll("button[type='button']");
+        let hrefArr = [...href];
+        for (let a in hrefArr) {
+          if (hrefArr[a].textContent === "Allow custom app development") {
+            hrefArr[a].click();
+          }
+        }
+      } catch (e) {
+        console.log("Skipping Processs");
+      }
+    }
+    await delay(4000);
     //Create An App
     console.log("Clicking on Create anApp Button");
     try {
