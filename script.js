@@ -69,6 +69,8 @@ let startAutomate = async () => {
       for (let a in hrefArr) {
         if (hrefArr[a].textContent === "Allow custom app development") {
           hrefArr[a].click();
+        } else {
+          console.log("Skipping Processs no  Allow Custom app button Found");
         }
       }
     } catch (e) {
@@ -81,6 +83,8 @@ let startAutomate = async () => {
       for (let a in hrefArr) {
         if (hrefArr[a].textContent === "Allow custom app development") {
           hrefArr[a].click();
+        } else {
+          console.log("Skipping Processs no  Allow Custom app button Found");
         }
       }
     } catch (e) {
