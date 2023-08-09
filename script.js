@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (creDentials) {
     textMessage.style.display = "none";
     buttonClick.style.display = "block";
-    alert(JSON.stringify(creDentials));
+    alert(JSON.stringify(creDentials, null, 2));
   }
 });
 
@@ -304,8 +304,6 @@ let startAutomate = async () => {
         app_secret: credentials[3],
         app_id: urlPatharr[6],
       };
-
-      let jsonRes = JSON.stringify(jsonResponse);
 
       chrome.runtime.sendMessage({ jsonResponse });
     } catch (e) {
