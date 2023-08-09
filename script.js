@@ -114,7 +114,7 @@ let startAutomate = async () => {
       if (inputName[0].getAttribute("placeholder")) {
         inputSelect = inputName[1];
       }
-      inputSelect.value = `${urlPatharr[2]}-custom-app`;
+      inputSelect.value = `${urlPatharr[2]}-simpl-app`;
       const inputEvent = new Event("input", { bubbles: true });
       inputEvent.simulated = true;
       inputSelect.dispatchEvent(inputEvent);
