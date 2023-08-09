@@ -1,0 +1,13 @@
+{
+  "name": "customApp Automate SIMPL",
+  "version": "1.0.0",
+  "description": "automation of custom app using extenison shopify only",
+  "manifest_version": 3,
+  "author": "Mayuresh Madav",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://*.shopify.com/*", "https://*.myshopify.com/*"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "CustomAPP"
+  }
+}
