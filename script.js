@@ -72,20 +72,20 @@ let startAutomate = async () => {
         }
       }
     } catch (e) {
-      await delay(4000);
-      try {
-        let href = document.querySelectorAll("button[type='button']");
-        let hrefArr = [...href];
-        for (let a in hrefArr) {
-          if (hrefArr[a].textContent === "Allow custom app development") {
-            hrefArr[a].click();
-          }
-        }
-      } catch (e) {
-        console.log("Skipping Processs");
-      }
+      console.log("Skipping Processs");
     }
     await delay(4000);
+    try {
+      let href = document.querySelectorAll("button[type='button']");
+      let hrefArr = [...href];
+      for (let a in hrefArr) {
+        if (hrefArr[a].textContent === "Allow custom app development") {
+          hrefArr[a].click();
+        }
+      }
+    } catch (e) {
+      console.log("Skipping Processs");
+    }
     //Create An App
     console.log("Clicking on Create anApp Button");
     try {
