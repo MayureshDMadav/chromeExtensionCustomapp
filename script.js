@@ -109,10 +109,12 @@ let startAutomate = async () => {
     try {
       let inputName = document.querySelectorAll("input[type]");
       let inputSelect = inputName[0];
+      let urlPath = window.location.pathname;
+      let urlPatharr = urlPath.split("/");
       if (inputName[0].getAttribute("placeholder")) {
         inputSelect = inputName[1];
       }
-      inputSelect.value = "simpl-custom-app";
+      inputSelect.value = `${urlPatharr[2]}-custom-app`;
       const inputEvent = new Event("input", { bubbles: true });
       inputEvent.simulated = true;
       inputSelect.dispatchEvent(inputEvent);
@@ -285,9 +287,6 @@ let startAutomate = async () => {
       console.log("Token button not found");
     }
     await delay(4000);
-    console.log(
-      "============== Below are the Details of the APP ==============="
-    );
     try {
       let inputTag = document.querySelectorAll("input[type]");
       let inputArr = [...inputTag];
