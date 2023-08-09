@@ -86,6 +86,7 @@ let startAutomate = async () => {
     } catch (e) {
       console.log("Skipping Processs");
     }
+    await delay(4000);
     //Create An App
     console.log("Clicking on Create anApp Button");
     try {
