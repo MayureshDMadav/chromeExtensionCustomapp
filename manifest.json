@@ -1,7 +1,7 @@
 {
-  "name": "customApp Automate SIMPL",
+  "name": "customApp Automate For Shopify",
   "version": "1.0.0",
-  "description": "automation of custom app using extenison shopify only",
+  "description": "To Create CustomAPP from Merchant Admin Dashboard",
   "manifest_version": 3,
   "author": "Mayuresh Madav",
   "permissions": ["scripting", "activeTab"],

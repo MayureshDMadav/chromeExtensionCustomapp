@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (creDentials) {
     textMessage.style.display = "none";
     buttonClick.style.display = "block";
-    alert(JSON.stringify(creDentials, null, 2));
+    alert("App Is Successfully Installed");
   }
 });
 
@@ -108,13 +108,12 @@ let startAutomate = async () => {
     console.log("Setting App Name");
     try {
       let inputName = document.querySelectorAll("input[type]");
+      let appName = document.querySelectorAll("h3")[0].textContent
       let inputSelect = inputName[0];
-      let urlPath = window.location.pathname;
-      let urlPatharr = urlPath.split("/");
       if (inputName[0].getAttribute("placeholder")) {
         inputSelect = inputName[1];
       }
-      inputSelect.value = `${urlPatharr[2]}-simpl-app`;
+      inputSelect.value = `${appName}-simpl-app`;
       const inputEvent = new Event("input", { bubbles: true });
       inputEvent.simulated = true;
       inputSelect.dispatchEvent(inputEvent);
