@@ -33,7 +33,7 @@ let startAutomate = async () => {
         hrefArr[a].click();
       }
     }
-    await delay(3000);
+    await delay(4000);
     //SALES AND CHANNELS
     console.log("Clicking on Sales and Channel Button");
     try {
@@ -47,7 +47,7 @@ let startAutomate = async () => {
     } catch (e) {
       console.log("Error on clicking Sales and channel Button");
     }
-    await delay(3000);
+    await delay(4000);
     //Develop App Section
     console.log("Clicking on Sales and Develop App Button");
     try {
@@ -110,7 +110,7 @@ let startAutomate = async () => {
       let inputName = document.querySelectorAll("input[type]");
       let appName = "";
       if (document.querySelectorAll("h3")[3] == undefined) {
-        appName = document.querySelectorAll("h3")[0].textContent;
+        appName = document.querySelectorAll("nav")[1].querySelectorAll("h3")[0].textContent
       } else {
         appName = document.querySelectorAll("h3")[3].textContent;
       }
@@ -129,7 +129,7 @@ let startAutomate = async () => {
     } catch {
       console.log("Entering App Name failed");
     }
-    await delay(3000);
+    await delay(4000);
     console.log("Clicking on Create App Button");
     try {
       let href = document.querySelectorAll("button[type='button']");
@@ -225,7 +225,7 @@ let startAutomate = async () => {
     } catch (e) {
       console.log("Error while selecting checkboxes");
     }
-    await delay(3000);
+    await delay(4000);
     try {
       const checkboxes = document.querySelectorAll("input[type='checkbox']");
       const checkArry = [...checkboxes];
