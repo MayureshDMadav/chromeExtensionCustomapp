@@ -108,7 +108,12 @@ let startAutomate = async () => {
     console.log("Setting App Name");
     try {
       let inputName = document.querySelectorAll("input[type]");
-      let appName = document.querySelectorAll("h3")[3].textContent
+      let appName = ""
+      if(document.querySelectorAll("h3")[3] == undefined){
+        appName = document.querySelectorAll("h3")[0].textContent
+      }else{
+        appName = document.querySelectorAll("h3")[3].textContent
+      }
       let inputSelect = inputName[0];
       if (inputName[0].getAttribute("placeholder")) {
         inputSelect = inputName[1];
